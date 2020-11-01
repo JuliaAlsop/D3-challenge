@@ -61,9 +61,9 @@ d3.csv("data.csv").then(function(data){
     .append("circle")
     .attr("cx", d => xLinearScale(d.age))
     .attr("cy", d => yLinearScale(d.obesity))
-    .attr("r", 20)
+    .attr("r", "20")
     .attr("fill", "blue")
-    .attr("opacity", ".7");
+    .attr("opacity", ".5");
 
 // Step 6: Initialize tool tip
     // ==============================
@@ -83,11 +83,10 @@ d3.csv("data.csv").then(function(data){
     circlesGroup.on("click", function(data) {
       toolTip.show(data, this);
     })
-      // onmouseout event
+       onmouseout event
       .on("mouseout", function(data, index) {
         toolTip.hide(data);
       });
-
     // Create axes labels
     chartGroup.append("text")
       .attr("transform", "rotate(-90)")
@@ -100,7 +99,7 @@ d3.csv("data.csv").then(function(data){
     chartGroup.append("text")
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
       .attr("class", "axisText")
-      .text("Age of People ");
+      .text("Age of People");
   }).catch(function(error) {
     console.log(error);
   });
