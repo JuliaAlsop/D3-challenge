@@ -4,8 +4,8 @@
 
 
 ### Core Assignment: D3 Dabbler (Required Assignment)
-
-![4-scatter](Images/4-scatter.jpg)
+RESULTING GRAPH FOR REFERENCE
+![Smokes vs. Age](Images/smokes vs age.jpg)
 
 You need to create a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
