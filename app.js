@@ -13,7 +13,7 @@ var height = svgHeight - margin.top - margin.bottom;
 
 // Create an SVG wrapper, append an SVG group that will hold our chart,
 // and shift the latter by left and top margins.
-var svg = d3.select(".chart")
+var svg = d3.select(".scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -28,7 +28,7 @@ d3.csv("data.csv").then(function(data){
   // parse data
   data.forEach(function(data) {
     data.age = +data.age;
-    data.obesity = +data.obesity;
+    data.smokes = +data.smokes;
   });
 
   // xLinearScale function above csv import
@@ -38,7 +38,7 @@ d3.csv("data.csv").then(function(data){
 
   // Create y scale function
   var yLinearScale = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.obesity)])
+    .domain([0, d3.max(data, d => d.smokes)])
     .range([height, 0]);
 
   // Create initial axis functions
@@ -60,7 +60,7 @@ d3.csv("data.csv").then(function(data){
     .enter()
     .append("circle")
     .attr("cx", d => xLinearScale(d.age))
-    .attr("cy", d => yLinearScale(d.obesity))
+    .attr("cy", d => yLinearScale(d.smokes))
     .attr("r", 20)
     .attr("fill", "blue")
     .attr("opacity", ".7");
@@ -71,7 +71,7 @@ d3.csv("data.csv").then(function(data){
       .attr("class", "tooltip")
       .offset([80, -60])
       .html(function(d) {
-        return (`${d.age}<br>Age: ${d.obesity}<br>Obesity:`);
+        return (`${d.age}<br>Age: ${d.smokes}<br>Smokers:`);
       });
 
     // Step 7: Create tooltip in the chart
@@ -95,12 +95,12 @@ d3.csv("data.csv").then(function(data){
       .attr("x", 0 - (height / 2))
       .attr("dy", "1em")
       .attr("class", "axisText")
-      .text("Obesity");
+      .text("Smokers");
 
     chartGroup.append("text")
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
       .attr("class", "axisText")
-      .text("Age of People ");
+      .text("Age");
   }).catch(function(error) {
     console.log(error);
   });
