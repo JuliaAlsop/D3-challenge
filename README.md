@@ -1,13 +1,11 @@
 # D3 Homework - Data Journalism and D3
 
-![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
-
 
 ### Core Assignment: D3 Dabbler (Required Assignment)
 RESULTING GRAPH FOR REFERENCE
 
 
-![Smokes vs. Age](Images/smokes vs age.jpg)
+![Smokes vs. Age](Images/smokesvsage.jpg)
 
 You need to create a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
