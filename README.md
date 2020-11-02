@@ -7,13 +7,17 @@ RESULTING GRAPH FOR REFERENCE
 
 ![Smokes vs. Age](smokesvsage.png)
 
-You need to create a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
-Using the D3 techniques we taught you in class, create a scatter plot that represents each state with circle elements. You'll code this graphic in the `app.js` file of your homework directory—make sure you pull in the data from `data.csv` by using the `d3.csv` function. Your scatter plot should ultimately appear like the image at the top of this section.
+Correlations Discovered Between Smokers and Age:
 
-* Include state abbreviations in the circles.
 
-* Create and situate your axes and labels to the left and bottom of the chart.
+First Correlation found between smokers and age includes: A greater amount of smokes occur between the ages of 36-40 than any other ages represented in data with a majority of the smokes between 14-24.
 
-* Note: You'll need to use `python -m http.server` to run the visualization. This will host the page at `localhost:8000` in your web browser.
+
+
+Second Correlation found between smokers and age includes:The state with the highest amount of smokes is West Virginia with an age of 41.9; the state with the lowest amount of smokes is Utah with smokes of 9.7 and an age of 30.5.
+
+
+
+Third Correlation found between smokers and age includes: Age 36-38 had the largest amount of smokers that have at least 15-20 smokes.
 
